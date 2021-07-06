@@ -5,11 +5,19 @@
 int Dice();
 int main(){
 srand((unsigned int)time(NULL));
+ char yrname[20];
+
+printf("What is your name?\n");
+ printf(">");
+ scanf("%s",yrname);
+ printf("Hello, %s!\n",yrname);
+ 
 printf("Rolling the dice...\n");
 
  int pa=0;
  int valu=0;
- char yrname[20];
+
+
  while(pa<2)
  {
   valu += Dice(pa+1);
@@ -23,9 +31,11 @@ printf("Rolling the dice...\n");
   }
  else printf("%s lost!\n",yrname);
 
+
 return 0;
 
 }
+
 
 int Dice(int pa){
 
@@ -36,3 +46,5 @@ int Dice(int pa){
 
  return dinum;
 }
+//=======
+//>>>>>>> experimental
